@@ -1,0 +1,163 @@
+[colors]
+background = #2E3440
+buffer = #3B4252
+foreground = #D8DEE9
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+alert = #BF616A
+warning = #D08770
+notify = #EBCB8B
+success = #A3BE8C
+function = #B48EAD
+
+[bar/example]
+monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 28
+
+background = ${colors.background}
+foreground = ${colors.nord6}
+
+line-size = 3
+line-color = ${color.alert} #BF616A
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;3
+font-1 = unifont:fontformat=truetype:size=10:antialias=true;2
+font-2 = siji:pixelsize=10;3
+font-3 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=true;3
+font-4 = FontAwesome5Brands:style=Solid:pixelsize=10:antialias=true;3
+
+modules-left = i3 xwindow
+modules-center = date 
+modules-right = spotify pulseaudio memory cpu 
+
+tray-position = right
+tray-padding = 15
+
+override-redirect = false
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+format-prefix = "   "
+format-prefix-foreground = ${colors.nord7}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = ${colors.function}
+label-mode-background = ${colors.nord7}
+
+label-focused = %index%
+label-focused-background = ${colors.nord7}
+label-focused-underline= ${colors.warning}
+label-focused-foreground =${colors.foreground}
+label-focused-padding = 2
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.nord7}
+label = %percentage: %%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.nord7}
+label = %percentage_used%%
+
+[module/date]
+type = internal/date
+interval = 5
+
+date-alt = " %a, %d %h %y"
+date =
+
+time-alt = " %I : %M %p"
+time = " %I : %M %p"
+
+format-prefix =  
+format-prefix-foreground = ${colors.nord7}
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+use-ui-max = true
+interval = 3
+format-volume = <ramp-volume> <label-volume>
+label-muted =  muted
+label-muted-foreground = ${colors.warning} 
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+; Right and Middle click (unreleased)
+; click-middle = 
+click-right = pavucontrol &
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+compositing-border = over
+pseudo-transparency = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = "  "
+format-prefix-foreground = ${colors.nord7}
+format = <label>
+exec = python ~/.config/polybar/spotify.py -f '{artist}: {song}'
+;format-underline = ${colors.secondary}
+click-middle = playerctl play-pause
