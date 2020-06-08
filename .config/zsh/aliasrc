@@ -1,0 +1,41 @@
+#!/bin/sh
+# Add Alias Here (Source this file in your zshrc/bashrc file )
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"\
+	x="startx"
+# Abbrevation for long Commands
+alias \
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	p="sudo pacman" \
+	y='yay'	\
+	emu="scrcpy -m 1920"\
+	SS="sudo systemctl"\
+	zshrc="e .config/zsh/.zshrc"\
+	ws="wal -i $HOME/Pictures/wallpapers"\
+	fg='figlet'
+
+
+alias ls='ls --color=auto'
+alias ll='ls -l'
+# ls, the common ones I use a lot shortened for rapid fire usage
+alias l='ls -lFh --color=auto'     #size,show type,human readable
+alias la='ls -lAFh --color=auto'   #long list,show almost all,show type,human readable
+alias lr='ls -tRFh --color=auto'   #sorted by date,recursive,show type,human readable
+alias lt='ls -ltFh --color=auto'   #long list,sorted by date,show type,human readable
+alias ll='ls -l --color=auto'      #long list	
+alias ..='cd ..'
+alias dev='cd ~/Developer'
