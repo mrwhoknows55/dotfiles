@@ -14,7 +14,7 @@ autoload -U colors && colors
 # Promt
 #PROMPT='[ %F{208}%n%f %F{226}%~%f ]'
 
-export ZSH="/home/whoknows/.config/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="sonicradish"
 ZSH_THEME="norm"
 
