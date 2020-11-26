@@ -1,4 +1,0 @@
-keycode 135 = Super_R
-clear    Lock
-keycode  66 = Escape
-keycode 9 = Caps_Lock NoSymbol Caps_Lock
