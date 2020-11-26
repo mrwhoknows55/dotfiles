@@ -1,0 +1,32 @@
+call plug#begin('~/.vim/plugged')
+	Plug 'itchyny/lightline.vim'                   
+	Plug 'scrooloose/nerdtree'		
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'vim-python/python-syntax'
+	Plug 'jreybert/vimagit'
+	Plug 'vimwiki/vimwiki'                            
+	Plug 'ap/vim-css-color'                          
+	Plug 'arcticicestudio/nord-vim'
+	Plug 'junegunn/seoul256.vim'
+	Plug 'junegunn/vim-easy-align'
+	Plug 'junegunn/fzf'
+
+call plug#end()
+
+" Vim ColorScheme
+colorscheme nord
+
+" lightline theme
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+" TODO: fuzzy finder
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
+syntax enable   
+set relativenumber number

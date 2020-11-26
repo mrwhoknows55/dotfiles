@@ -1,0 +1,37 @@
+# Core Settings
+backend = "glx";
+refresh-rate = 0;
+glx-no-stencil = true;
+glx-copy-from-front = false;
+glx-swap-method = "undefined";
+vsync = "opengl-swc";
+paint-on-overlay = true;
+
+# Fading
+fading = true;
+fade-in-step = 0.09;
+fade-out-step = 0.09;
+
+# Shadow
+shadow = true;
+clear-shadow = true;
+shadow-radius = 30;
+shadow-opacity = 0.1;
+
+# Blur
+blur-method = "kawase";
+blur-strength = 20;
+blur-background = true;
+
+menu-opacity = 1;
+inactive-opacity = 1;
+active-opacity = 0.9;
+frame-opacity = 1;
+inactive-opacity-override = false;
+alpha-step = 0.06;
+
+
+opacity-rule = ["70:name *?= 'cmatrix'",
+                "70:name *?= 'cava'",
+                "98:name *?= 'thunar'"
+];

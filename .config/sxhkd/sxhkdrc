@@ -1,0 +1,68 @@
+## Basic
+super + F11
+	$TERMINAL
+super + F12
+	dmenu_run
+alt + space
+	rofi -show run
+super + z
+	rofimoji
+
+## Apps
+
+super + a
+	./Desktop/Android.desktop
+super + e
+	$FILE
+super + w
+	$BROWSER
+super + x
+	$SCRIPTS/scrcpy.sh
+super + shift + x
+	$SCRIPTS/adbOverWifi.sh
+super + shift  e
+	$SCRIPTS/power-rofi.sh
+
+## Screenshots
+Print
+	scrot -e 'mv $f ~/Pictures' | notify-send -a scrot -t 1000 "Screenshot saved in ~/Pictures"
+super + Print
+	$SCRIPTS/screenshot-rofi.sh
+
+### Fn + Fn Keys
+
+# Fn+F1
+XF86Tools
+	LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+# Fn+F2
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +3%
+# Fn+F3
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -3%
+# Fn+F4
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+# Fn+F5
+XF86AudioStop
+	playerctl stop
+# Fn+F6
+XF86AudioPrev
+	playerctl previous
+# Fn+F7
+XF86AudioPlay
+	playerctl play-pause
+# Fn+F8
+XF86AudioNext
+	playerctl next
+# Fn+F9
+XF86Mail
+	chromium mail.google.com
+# Fn+F10
+XF86HomePage
+	dropbox
+# Fn+F12
+XF86Calculator
+	galculator
+
+# TODO: Add multiple key  comb
