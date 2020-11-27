@@ -9,6 +9,8 @@ alias \
 	mkd="mkdir -pv" \
 	yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
+	ytp="yt -o \"%(playlist_index)s-%(title)s.%(ext)s\""\
+	lofi="mpv --no-video https://www.youtube.com/watch\?v\=5qap5aO4i9A"\
 	ffmpeg="ffmpeg -hide_banner"\
 	x="startx"
 # Abbrevation for long Commands
@@ -26,17 +28,31 @@ alias \
 	SS="sudo systemctl"\
 	zshrc="e $ZDOTDIR/.zshrc"\
 	ws="wal -i $HOME/Pictures/wallpapers"\
-	fg='figlet'
+	note="nvim ~/Documents/Notes/notes_$(date +"%Y-%m-%d_%H:%M").md"\
 
-alias spotify='LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify'
+alias rec-new-key='gpg --keyserver pool.sks-keyservers.net --recv-keys'
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
-# ls, the common ones I use a lot shortened for rapid fire usage
-alias l='ls -lFh --color=auto'     #size,show type,human readable
-alias la='ls -lAFh --color=auto'   #long list,show almost all,show type,human readable
-alias lr='ls -tRFh --color=auto'   #sorted by date,recursive,show type,human readable
-alias lt='ls -ltFh --color=auto'   #long list,sorted by date,show type,human readable
-alias ll='ls -l --color=auto'      #long list	
+alias l='ls -lFh --color=auto'     
+alias la='ls -lAFh --color=auto'  
+alias lr='ls -tRFh --color=auto' 
+alias lt='ls -ltFh --color=auto'
+alias ll='ls -l --color=auto' 
 alias ..='cd ..'
 alias dev='cd ~/Developer'
+alias idea='idea.sh'
+alias Powershell='pwsh'
+# git alias ->
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add -A'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gi='git init'
+alias gl='git log'
+alias gp='git pull'
+alias gpsh='git push'
+alias gss='git status -s'
+alias gs='figlet -f small DONT FORGET TO PULL ; echo "\n" ; git status'

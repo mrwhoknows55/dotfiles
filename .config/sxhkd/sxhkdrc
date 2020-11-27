@@ -3,6 +3,8 @@ super + F11
 	$TERMINAL
 super + F12
 	dmenu_run
+super + F10
+	udiskie-dmenu
 alt + space
 	rofi -show run
 super + z
@@ -16,11 +18,13 @@ super + e
 	$FILE
 super + w
 	$BROWSER
+super + shift + w
+	$BROWSER_SEC
 super + x
 	$SCRIPTS/scrcpy.sh
 super + shift + x
 	$SCRIPTS/adbOverWifi.sh
-super + shift  e
+super + shift + e
 	$SCRIPTS/power-rofi.sh
 
 ## Screenshots
@@ -33,7 +37,7 @@ super + Print
 
 # Fn+F1
 XF86Tools
-	LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+	spotify
 # Fn+F2
 XF86AudioRaiseVolume
 	pactl set-sink-volume 0 +3%

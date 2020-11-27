@@ -16,9 +16,9 @@ ZSH_THEME="refined"
 # agnoster -> powerline
 
 # Plugins
-pluginis=(git)
+pluginis=(git, wakatime)
 
 source $ZSH/oh-my-zsh.sh
 
 # tools to run everytime 
-pfetch
+cowsay  -f tux "Welcome MrWhoKnows"

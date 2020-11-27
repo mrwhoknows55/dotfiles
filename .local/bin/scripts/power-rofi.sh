@@ -16,20 +16,20 @@ options="$power_off\n$reboot\n$lock\n$suspend\n$log_out"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 4)"
 case $chosen in
     $power_off)
-        systemctl poweroff
+        loginctl poweroff
         ;;
     $reboot)
-        systemctl reboot
+        loginctl reboot
         ;;
     $lock)
        	i3lock 
         ;;
     $suspend)
         playerctl stop       
-        systemctl suspend
+        loginctl suspend
         ;;
     $log_out)
-        i3-msg exit
+       	loginctl kill-session 1 
         ;;
 esac
 
