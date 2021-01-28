@@ -1,0 +1,6 @@
+[submodule ".local/src/dwm"]
+	path = .local/src/dwm
+	url = https://gitlab.com/mr_whoknows/dwm-build.git
+[submodule ".local/src/slstatus"]
+	path = .local/src/slstatus
+	url = https://gitlab.com/mr_whoknows/slstatus.git
