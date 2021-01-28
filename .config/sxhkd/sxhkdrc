@@ -13,7 +13,7 @@ super + z
 ## Apps
 
 super + a
-	./Desktop/Android.desktop
+	studio
 super + e
 	$FILE
 super + w

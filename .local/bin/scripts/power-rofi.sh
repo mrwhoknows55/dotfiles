@@ -29,7 +29,7 @@ case $chosen in
         loginctl suspend
         ;;
     $log_out)
-       	loginctl kill-session 1 
+       	killall xinit
         ;;
 esac
 

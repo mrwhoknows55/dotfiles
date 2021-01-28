@@ -10,10 +10,7 @@ HISTFILE=~/.cache/zsh/history
 autoload -U colors && colors
 # OMZ Configs
 
-ZSH_THEME="refined"
-# refined  arrow  nanotech  jnrowe muse kolo
-# jonathan -> full dual line
-# agnoster -> powerline
+ZSH_THEME="refined" # refined  arrow  nanotech  jnrowe muse kolo jonathan agnoster powerline
 
 # Plugins
 pluginis=(git, wakatime)

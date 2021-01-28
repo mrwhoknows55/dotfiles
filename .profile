@@ -24,7 +24,9 @@ export SCRIPTS="$HOME/.local/bin/scripts"
 export PATH=${PATH}:$HOME/.emacs.d/bin
 
 export XDG_USER_CONFIG_DIR=$HOME/.config
-export QT_QPA_PLATFORMTHEME=qt5ct
+#export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=kvantum
+export QT_STYLE_OVERRIDE=kvantum
 
 export ANDROID_HOME=$HOME/Developer/Binary/sdk
 export ANDROID_SDK_ROOT=$HOME/Developer/Binary
@@ -42,12 +44,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export FLASK_APP="app.py"
 
 # Go
-#export GOROOT="/home/whoknows/Developer/Go/"
-#export GOBIN="/home/whoknows/Developer/Go/bin"
 export GOPATH="/home/whoknows/Developer/Go/"
-
-#export PATH=${PATH}:$GOROOT
-#export PATH=${PATH}:$GOBIN
 export PATH=${PATH}:$GOPATH
 
 # ZSH File Directory
@@ -59,4 +56,3 @@ export GDK_BACKEND=x11
 
 # Start graphical server on tty2 if not already running.
 [ "$(tty)" = "/dev/tty2" ] && ! pgrep -x Xorg >/dev/null && SESSION_TYPE=x11 GDK_BACKEND=x11 exec startx
-

@@ -1,6 +1,0 @@
-[submodule ".local/slstatus"]
-	path = .local/slstatus
-	url = git@gitlab.com:mr_whoknows/slstatus.git
-[submodule ".local/dwm"]
-	path = .local/dwm
-	url = git@gitlab.com:mr_whoknows/dwm-build.git
